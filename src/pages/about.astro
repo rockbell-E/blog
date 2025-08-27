@@ -1,5 +1,17 @@
 ---
+const pageTitle = "Sneakers"
 
+const identity = {
+	nombre: "Blog sneakers",
+	pais: "Chile",
+	descripcion: "Blog dedicados a hablar sobre las diferentes tipos de siluetas existentes en el mercado"
+}
+
+const marcas = ["Jordan", "Puma", "Adidas", "Nike"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="es">
@@ -8,19 +20,30 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Inicio</a>
         <a href="/about">Sobre el blog</a>
         <a href="/blog">Blog</a>
 
-		<h1>Blog sobre sneakers</h1>
+		<h1>{pageTitle}</h1>
 
-        <h2>Todo sobre los diferentes tipos de siluetas de sneakers</h2>
 
-        <p>Este sitio web te permitira ver contenido de diferentes tipos de siluetas de sneaker sin importar modelo, precio o marca</p>
+		<p>Algunos datos sobre el blog</p>
 
+		<ul>
+			<li>{identity.nombre}</li>
+			<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
+		</ul>
+
+		<p>Algunas marcas que puedes encontrar son:</p>
+		<ul>
+			{marcas.map((marca) => <li>{marca}</li>)}
+		</ul>
         
+		{happy && <p>El blog sigue en desarrollo</p>}
+		{finished && <p>He terminado este blog</p>}
+		{goal === 3 ? <p>Mi objetivo es terminar en 3 dias</p> : <p>Mi objetivo no son 3 dias</p>}
 	</body>
 </html>
