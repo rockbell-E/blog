@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "Sneakers"
 
 const identity = {
@@ -12,6 +14,10 @@ const marcas = ["Jordan", "Puma", "Adidas", "Nike"]
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const marcaColor = "navy"
+const fontWeight = "bold"
+const textCase = "uppercase"
 ---
 
 <html lang="es">
@@ -21,6 +27,7 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<link rel="stylesheet" href="/styles/about.css">
 	</head>
 	<body>
         <a href="/">Inicio</a>
@@ -39,7 +46,7 @@ const goal = 3;
 
 		<p>Algunas marcas que puedes encontrar son:</p>
 		<ul>
-			{marcas.map((marca) => <li>{marca}</li>)}
+			{marcas.map((marca) => <li class="marca">{marca}</li>)}
 		</ul>
         
 		{happy && <p>El blog sigue en desarrollo</p>}
