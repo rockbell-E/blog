@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
 
 const pageTitle = "Pagina de inicio"
@@ -11,13 +14,13 @@ const pageTitle = "Pagina de inicio"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<link rel="stylesheet" href="/styles/footer.css">
+
 	</head>
 	<body>
-        <a href="/">Inicio</a>
-        <a href="/about">Sobre el blog</a>
-        <a href="/blog">Blog</a>
-
+		<Header/>
 
 		<h1>{pageTitle}</h1>
+		<Footer>
 	</body>
 </html>

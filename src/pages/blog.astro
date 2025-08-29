@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
 
 const pageTitle = "Blog sobre sneakers"
@@ -12,11 +15,11 @@ const pageTitle = "Blog sobre sneakers"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<link rel="stylesheet" href="/styles/footer.css">
+
 	</head>
 	<body>
-        <a href="/">Inicio</a>
-        <a href="/about">Sobre el blog</a>
-        <a href="/blog">Blog</a>
+        <Header/>
 
 		<h1>{pageTitle}</h1>
 
@@ -27,5 +30,6 @@ const pageTitle = "Blog sobre sneakers"
             <li><a href="/posts/post-2">Jordan 1 chicago</a></li>
             <li><a href="/posts/post-3">Adidas campus</a></li>
         </ul>
+		<Footer>
 	</body>
 </html>
