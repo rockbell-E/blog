@@ -25,7 +25,6 @@ h1 {
     top: 5rem;
     left: 48px;
     background: #ff9776;
-    /* display: none; */
     margin: 0;
 }
 
@@ -60,4 +59,21 @@ h1 {
         display: inline-block;
         padding: 15px 20px;
     }
+}
+
+.sneakers {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.sneakers .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: #ff9776;
+}
+
+.sneakers {
+    display: none;
 }

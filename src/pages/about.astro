@@ -1,7 +1,5 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css'
 
 const pageTitle = "Sneakers"
@@ -23,37 +21,24 @@ const fontWeight = "bold"
 const textCase = "uppercase"
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<link rel="stylesheet" href="/styles/about.css">
-		<link rel="stylesheet" href="/styles/footer.css">
-	</head>
-	<body>
-        <Header/>
-
-		<h1>{pageTitle}</h1>
-
-
-		<p>Algunos datos sobre el blog</p>
-
-		<ul>
-			<li>{identity.nombre}</li>
-			<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
-		</ul>
-
-		<p>Algunas marcas que puedes encontrar son:</p>
-		<ul>
-			{marcas.map((marca) => <li class="marca">{marca}</li>)}
-		</ul>
-        
-		{happy && <p>El blog sigue en desarrollo</p>}
-		{finished && <p>He terminado este blog</p>}
-		{goal === 3 ? <p>Mi objetivo es terminar en 3 dias</p> : <p>Mi objetivo no son 3 dias</p>}
-		<Footer>
-	</body>
-</html>
+<BaseLayout pageTitle="Nosotros">
+	<h1>{pageTitle}</h1>
+	
+	
+	<p>Algunos datos sobre el blog</p>
+	
+	<ul>
+		<li>{identity.nombre}</li>
+		<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
+	</ul>
+	
+	<p>Algunas marcas que puedes encontrar son:</p>
+	<ul>
+		{marcas.map((marca) => <li class="marca">{marca}</li>)}
+	</ul>
+	
+	{happy && <p>El blog sigue en desarrollo</p>}
+	{finished && <p>He terminado este blog</p>}
+	{goal === 3 ? <p>Mi objetivo es terminar en 3 dias</p> : <p>Mi objetivo no son 3 dias</p>}
+	
+</BaseLayout>
