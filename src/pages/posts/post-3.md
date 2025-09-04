@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Adidas campus'
 pubDate: 2025-08-25
 description: 'hablando de las adidas campus.'

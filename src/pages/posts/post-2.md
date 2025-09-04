@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Jordan 1 chicago'
 pubDate: 2025-08-25
 description: 'hablando de las jordan 1 chicago.'
