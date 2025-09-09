@@ -1,0 +1,22 @@
+nav {
+    background: #707070;
+}
+
+.nav-links {
+    padding: 2rem 0 2rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+}
+
+.nav-links a:hover {
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
