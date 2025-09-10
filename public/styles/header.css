@@ -3,9 +3,10 @@ nav {
 }
 
 .nav-links {
-    padding: 2rem 0 2rem 1rem;
+    padding: 2rem 2rem 2rem 0;
     display: flex;
     justify-content: flex-end;
+    gap: 1rem;
 }
 
 .nav-links a {
@@ -13,10 +14,5 @@ nav {
     text-decoration: none;
     color: #fff;
     padding: 0.4rem 1.2rem;
-}
-
-.nav-links a:hover {
-    border: 1px solid;
-    border-radius: 1rem;
 }
 
