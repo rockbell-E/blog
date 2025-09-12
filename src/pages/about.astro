@@ -22,21 +22,24 @@ const textCase = "uppercase"
 ---
 
 <BaseLayout pageTitle="Nosotros">
-	<h1>{pageTitle}</h1>
-	
-	
-	<p>Algunos datos sobre el blog</p>
-	
-	<ul>
-		<li>{identity.nombre}</li>
-		<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
-	</ul>
-	
-	<p>Algunas marcas que puedes encontrar son:</p>
-	<ul>
-		{marcas.map((marca) => <li class="marca">{marca}</li>)}
-	</ul>
-	
-	{happy && <p>El blog sigue en desarrollo</p>}
+	<div class="container">
+
+		<h1>{pageTitle}</h1>
+		
+		
+		<p>Algunos datos sobre el blog</p>
+		
+		<ul>
+			<li>{identity.nombre}</li>
+			<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
+		</ul>
+		
+		<p>Algunas marcas que puedes encontrar son:</p>
+		<ul>
+			{marcas.map((marca) => <li class="marca">{marca}</li>)}
+		</ul>
+		
+		{happy && <p>El blog sigue en desarrollo</p>}
+	</div>
 	
 </BaseLayout>

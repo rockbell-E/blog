@@ -1,8 +1,38 @@
 .titulo {
-    margin: 2rem 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
 .titulo h1 {
     font-size: 3rem;
+}
+
+.sub-title {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.posts-container {
+    padding: 1rem 0.5rem;
+}
+
+.posts {
+    border: 1px solid #111;
+}
+
+.post {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.description {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    color: #111;
+}
+
+.silueta {
+    width: 9rem;
 }
