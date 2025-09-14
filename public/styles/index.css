@@ -17,22 +17,31 @@
 }
 
 .posts {
-    border: 1px solid #111;
+    border: 3px solid #111;
+    border-radius: 10%;
 }
 
 .post {
-    display: flex;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
+.post-img {
+    display: flex;
+    justify-content: center;
+}
+
 .description {
-    width: 100%;
     display: grid;
     align-items: center;
     color: #111;
+    padding: 1rem 0 1rem 5%;
+}
+
+.description p {
+    padding: 0.5rem 0;
 }
 
 .silueta {
-    width: 9rem;
+    width: 50%;
 }
