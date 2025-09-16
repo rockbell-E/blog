@@ -11,35 +11,32 @@ const identity = {
 }
 
 const marcas = ["Jordan", "Puma", "Adidas", "Nike"]
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const marcaColor = "navy"
-const fontWeight = "bold"
-const textCase = "uppercase"
 ---
 
 <BaseLayout pageTitle="Nosotros">
+	<head><link rel="stylesheet" href="/styles/about.css"></head>
+
 	<div class="container">
 
-		<h1>{pageTitle}</h1>
+		<div class="content">
+			<div class="title">
+				<h1>Sobre el blog</h1>
+			</div>
+			
+			
+			<p>Algunos datos sobre el blog</p>
+			
+			<ul class="description">
+				<li>{identity.nombre}</li>
+				<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
+			</ul>
+			
+			<p>Algunas marcas que puedes encontrar son:</p>
+			<ul>
+				{marcas.map((marca) => <li class="marca">{marca}</li>)}
+			</ul>
+		</div>
 		
-		
-		<p>Algunos datos sobre el blog</p>
-		
-		<ul>
-			<li>{identity.nombre}</li>
-			<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
-		</ul>
-		
-		<p>Algunas marcas que puedes encontrar son:</p>
-		<ul>
-			{marcas.map((marca) => <li class="marca">{marca}</li>)}
-		</ul>
-		
-		{happy && <p>El blog sigue en desarrollo</p>}
 	</div>
 	
 </BaseLayout>

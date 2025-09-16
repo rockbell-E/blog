@@ -1,10 +1,18 @@
+.title {
+    text-align: center;
+    padding: 1rem 0;
+}
+
 h1 {
-    color: purple;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .marca {
     color: var(--marcaColor);
     font-weight: var(--fontWeight);
     text-transform: var(--textCase);
+}
+
+.description {
+    list-style-type: none;
 }

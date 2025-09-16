@@ -19,6 +19,7 @@
 .posts {
     border: 3px solid #111;
     border-radius: 10%;
+    list-style-type: none;
 }
 
 .post {
