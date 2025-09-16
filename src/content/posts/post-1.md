@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Jordan 4 black cat'
 pubDate: 2025-08-25
 description: 'hablando de las jordan 4 black cat.'

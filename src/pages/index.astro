@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection('posts')
+
 ---
 
 <BaseLayout pageTitle="pagina de inicio">
@@ -17,17 +21,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				</div>
 				<div class="posts-container">
 					<ul>
-						<li class="posts">
-							<a href="posts/post-1" class="post">
-								<div class="post-img">
-									<img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/34d6f0cb-70ef-48e5-81ad-f618a32be1ed/air-jordan-iv-black-cat-release-date.jpg" alt="Foto de la silueta" class="silueta">
-								</div>
-								<div class="description">
-									<p>Modelo: Jordan 4 black cat</p>
-									<p>Marca: Jordan</p>
-								</div>
-							</a>
-						</li>
+						{
+							posts.map(post => {
+								const {slug, data} = post
+								const { title, author, image, pubData, description} = data
+
+								return (
+
+									<li class="posts">
+										<a href={`/post/${slug}`}>
+											<div class="post-img">
+												<img src={`/${image}`} alt={title} class="silueta">
+											</div>
+											<div class="description">
+												<p>{title}</p>
+												<p>Marca: Jordan</p>
+											</div>
+										</a>
+									</li>
+								)
+							})
+						}
 					</ul>
 				</div>
 			</div>
