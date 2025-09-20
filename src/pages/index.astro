@@ -24,14 +24,14 @@ const posts = await getCollection('posts')
 						{
 							posts.map(post => {
 								const {slug, data} = post
-								const { title, author, image, pubData, description} = data
+								const { title, author, image, pubDate, description} = data
 
 								return (
 
 									<li class="posts">
 										<a href={`/post/${slug}`}>
 											<div class="post-img">
-												<img src={`/${image}`} alt={title} class="silueta">
+												<img src={`${image.url}`} alt={image.alt} class="silueta">
 											</div>
 											<div class="description">
 												<p>{title}</p>
