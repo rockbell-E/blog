@@ -1,0 +1,26 @@
+a {
+    color: black;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+aside p {
+    font-family: cursive;
+}
+
+span {
+    font-weight: bolder;
+}
+
+h2 {
+    padding-top: 2rem;
+}

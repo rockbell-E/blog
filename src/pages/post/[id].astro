@@ -17,15 +17,21 @@ const { title, image, author,description,pubDate} = data
 const { Content} = await render(post)
 ---
 <BaseLayout pageTitle=`${title}`>
-    <div>
-        <div>
+    <head><link rel="stylesheet" href="/styles/post.css"></head>
+    <div class="container">
 
-            <aside>
-                <img src=`${image.url}` alt="">
-            </aside>
-        </div>
-        <div>
-            <Content/>
+        <div class="content">
+            <a href="/">Volver</a>
+            <div class="image">
+                <aside>
+                    <img src=`${image.url}` alt=`${image.alt}`>
+                    <p><span>Fecha publicacion:</span>{pubDate}</p>
+                    <p><span>Autor:</span> {author}</p>
+                </aside>
+            </div>
+            <div>
+                <Content/>
+            </div>
         </div>
     </div>
 
