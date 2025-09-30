@@ -7,12 +7,11 @@ h1 {
     font-size: 3rem;
 }
 
-.marca {
-    color: var(--marcaColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
+p {
+    padding: 1rem 0;
+    font-size: large;
 }
 
-.description {
-    list-style-type: none;
+ul {
+    padding: 1rem 0;
 }

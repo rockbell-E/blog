@@ -2,15 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css'
 
-const pageTitle = "Sneakers"
-
-const identity = {
-	nombre: "Blog sneakers",
-	pais: "Chile",
-	descripcion: "Blog dedicados a hablar sobre las diferentes tipos de siluetas existentes en el mercado"
-}
-
-const marcas = ["Jordan", "Puma", "Adidas", "Nike"]
 ---
 
 <BaseLayout pageTitle="Nosotros">
@@ -20,23 +11,25 @@ const marcas = ["Jordan", "Puma", "Adidas", "Nike"]
 
 		<div class="content">
 			<div class="title">
-				<h1>Sobre el blog</h1>
+				<h1>Bienvenidos a Blog Sneakers – Tu espacio de cultura sneaker en Chile</h1>
 			</div>
 			
 			
-			<p>Algunos datos sobre el blog</p>
+			<p>Blog Sneakers es un espacio creado para todos los amantes de las zapatillas que buscan estar al tanto de las últimas tendencias, lanzamientos y curiosidades del mundo sneaker. Somos un blog chileno especializado en explorar y analizar las diferentes siluetas que existen en el mercado, desde los clásicos que marcaron historia hasta los modelos más innovadores y disruptivos del momento.</p>
 			
-			<ul class="description">
-				<li>{identity.nombre}</li>
-				<li>La pagina es originaria de {identity.pais} y este es un {identity.descripcion}</li>
-			</ul>
-			
-			<p>Algunas marcas que puedes encontrar son:</p>
+			<p>En nuestro sitio encontrarás contenido detallado sobre las principales marcas que dominan la escena global del calzado deportivo y urbano. Algunas de las más destacadas que cubrimos son:</p>
+
 			<ul>
-				{marcas.map((marca) => <li class="marca">{marca}</li>)}
+				<li>Jordan: Desde sus inicios icónicos con Michael Jordan hasta las últimas colaboraciones con artistas y diseñadores.</li>
+				<li>Puma: Innovación y estilo con un enfoque deportivo y streetwear que sigue evolucionando.</li>
+				<li>Adidas: Tecnología, moda y sustentabilidad en cada silueta, desde las Ultraboost hasta las Yeezy.</li>
+				<li>Nike: La marca líder en la cultura sneaker, con modelos emblemáticos como las Air Max, Dunk, Air Force 1, entre muchas otras.</li>
 			</ul>
+
+			<p>Nuestro objetivo es compartir información útil, comparativas, historias detrás de los modelos, y guías que te ayuden a elegir tus próximas zapatillas con conocimiento y estilo.</p>
+
+			<p>Si eres un verdadero fanático de las zapatillas o simplemente estás empezando a adentrarte en este fascinante mundo, Blog Sneakers es tu punto de partida. ¡Súmate a la comunidad y mantente un paso adelante en la cultura sneaker!</p>
 		</div>
-		
 	</div>
 	
 </BaseLayout>
